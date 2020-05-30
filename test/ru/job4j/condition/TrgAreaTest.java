@@ -10,7 +10,7 @@ public class TrgAreaTest {
         int a = 5;
         int b = 7;
         int c = 4;
-        double expected = 9.797958971132712;
+        double expected = 9.79;
         double out = TrgArea.area(a, b, c);
         Assert.assertEquals(expected, out, 0.01);
     }
