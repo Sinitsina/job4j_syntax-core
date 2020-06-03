@@ -7,30 +7,44 @@ import static org.junit.Assert.assertThat;
 public class MultiMaxTest {
 
     @Test
-    public void whenSecondMax() {
-        MultiMax check = new MultiMax();
-        int result = check.max(1, 4, 2);
-        assertThat(result, is(4));
+    public void firstMax() {
+        int rsl = ThreeMax.max(10, 5, 1);
+        assertThat(rsl, is(10));
     }
 
     @Test
-    public void whenThirdMax() {
-        MultiMax check = new MultiMax();
-        int result = check.max(5,8,16);
-        assertThat(result, is(16));
+    public void secondMax() {
+        int rsl = ThreeMax.max(10, 50, 1);
+        assertThat(rsl, is(50));
     }
 
     @Test
-    public void whenFirstMax() {
-        MultiMax check = new MultiMax();
-        int result = check.max(20, 10,5);
-        assertThat(result, is(20));
+    public void thirdMax() {
+        int rsl = ThreeMax.max(1, 5, 100) ;
+        assertThat(rsl, is(100));
     }
 
     @Test
-    public void whenNumbersEqual() {
-        MultiMax check = new MultiMax();
-        int result = check.max(5,5,5);
-        assertThat(result, is(5));
+    public void allEq() {
+        int rsl = ThreeMax.max(1, 1, 1);
+        assertThat(rsl, is(1));
+    }
+
+    @Test
+    public void firstEqSecond() {
+        int rsl = ThreeMax.max(10, 10, 1);
+        assertThat(rsl, is(10));
+    }
+
+    @Test
+    public void firstEqThird() {
+        int rsl = ThreeMax.max(100, 1, 100);
+        assertThat(rsl, is(100));
+    }
+
+    @Test
+    public void secondEqThird() {
+        int rsl = ThreeMax.max(1, 100, 100);
+        assertThat(rsl, is(100));
     }
 }
