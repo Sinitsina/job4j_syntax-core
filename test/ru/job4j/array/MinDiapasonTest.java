@@ -22,7 +22,7 @@ public class MinDiapasonTest {
     public void whenLastMin() {
         assertThat(
                 MinDiapason.findMin(
-                        new int[] {10, 5, 3, 1},
+                        new int[] {11, 5, 3, 1},
                         1, 3
                 ),
                 is(1)
