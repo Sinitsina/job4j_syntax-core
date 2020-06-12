@@ -8,6 +8,7 @@ public class BarleyBreak {
             for (int j = 0; j < array.length; j++) {
                 array[i][j] = counter;
                 counter++;
+                System.out.println(array[i][j]);
             }
         }
     }
