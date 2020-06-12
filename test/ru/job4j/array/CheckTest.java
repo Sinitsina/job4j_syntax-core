@@ -17,6 +17,6 @@ public class CheckTest {
     public void whenDataNotMonoByTrueThenFalse() {
         boolean[] input = new boolean[] {false, true, true};
         boolean result = Check.mono(input);
-        assertThat(result, is(true));
+        assertThat(result, is(false));
     }
 }
