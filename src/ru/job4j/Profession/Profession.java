@@ -1,4 +1,4 @@
-package ru.job4j;
+package ru.job4j.Profession;
 
 public class Profession {
     private String name;
@@ -7,14 +7,18 @@ public class Profession {
     private String birthday;
 
     public String getName() {
+        return null;
     }
 
     public String getSurname() {
+        return null;
     }
 
     public String getEducation() {
+        return null;
     }
 
     public String getBirthday() {
+        return null;
     }
 }

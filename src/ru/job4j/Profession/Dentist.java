@@ -1,12 +1,13 @@
 package ru.job4j.Profession;
 
 public class Dentist extends Doctor {
-    public cureTooth() {
+    public void cureTooth() {
     }
 
-    public DiagnosisHeal(Pacient pacient) {
+    public void DiagnosisHeal(Pacient pacient) {
     }
 
     public String getSurname() {
+        return null;
     }
 }

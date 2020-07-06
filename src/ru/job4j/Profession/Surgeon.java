@@ -1,10 +1,10 @@
 package ru.job4j.Profession;
 
 public class Surgeon extends Doctor {
-    public DiagnosisHeal(Pacient pacient) {
+    public void DiagnosisHeal(Pacient pacient) {
     }
 
-    public makeSurgery() {
+    public void makeSurgery() {
 
     }
 }

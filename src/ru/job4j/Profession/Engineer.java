@@ -1,7 +1,5 @@
 package ru.job4j.Profession;
 
-import ru.job4j.Profession;
-
 public class Engineer extends Profession {
     private  Projects project;
 

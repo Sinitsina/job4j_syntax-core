@@ -6,9 +6,4 @@ public class Builder extends Engineer {
     public void buildHouse(Buildings building) {
     }
 
-    public getName() {
-    }
-
-    public String getEducation() {
-    }
 }

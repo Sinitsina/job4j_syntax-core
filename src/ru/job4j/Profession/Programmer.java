@@ -6,8 +6,5 @@ public class Programmer extends Engineer {
     public void createProgram(Programs program) {
 
     }
-    public getName() {
-
-    }
 
 }
