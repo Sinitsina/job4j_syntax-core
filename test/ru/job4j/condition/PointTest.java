@@ -23,4 +23,22 @@ public class PointTest {
         double out = first.distance(second);
         Assert.assertEquals(expected, out, 0.01);
     }
+
+    @Test
+    public void whenCoordinates004004ThenDistance3D56() {
+        Point first = new Point(0, 4, 0);
+        Point second = new Point(0, 0,4);
+        double expected = 5.65;
+        double out = first.distance3D(second);
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    public void whenCoordinates025184ThenDistance3D616() {
+        Point first = new Point(0, 2, 5);
+        Point second = new Point(1, 8,4);
+        double expected = 6.16;
+        double out = first.distance3D(second);
+        Assert.assertEquals(expected, out, 0.01);
+    }
 }
