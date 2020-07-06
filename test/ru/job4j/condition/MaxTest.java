@@ -24,5 +24,25 @@ public class MaxTest {
         assertThat(result, is(5));
     }
 
+    @Test
+    public void whenMax5843Then8() {
+        int result = Max.max(5,8,4,3);
+        assertThat(result, is(8));
+    }
+
+    @Test
+    public void whenMax1067Then10() {
+        int result = Max.max(10,6,7);
+        assertThat(result, is(10));
+    }
+
+    @Test
+    public void whenMax6666Then6() {
+        int result = Max.max(6,6,6,6);
+        assertThat(result, is(6));
+    }
+
+
+
 
 }
