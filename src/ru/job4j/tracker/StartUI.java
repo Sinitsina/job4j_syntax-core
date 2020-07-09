@@ -8,7 +8,7 @@ public class StartUI {
         item1.setId(135);
 
         tracker.add(item1);
-
         System.out.println(tracker.findById(135));
+        System.out.println(tracker.findByName("Declaration").toString());
     }
 }
