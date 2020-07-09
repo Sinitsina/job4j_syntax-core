@@ -2,7 +2,6 @@ package ru.job4j.tracker;
 
 public class Item {
     private int id;
-
     private String name;
 
     public int getId() {
@@ -24,7 +23,8 @@ public class Item {
     @Override
     public String toString() {
         return "Item{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 '}';
     }
 }
