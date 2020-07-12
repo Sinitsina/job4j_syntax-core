@@ -7,7 +7,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNull.nullValue;
 
 public class TrackerTest {
-    @Test
+    /*@Test
     public void whenReplace() {
         Tracker tracker = new Tracker();
         Item bug = new Item();
@@ -28,6 +28,6 @@ public class TrackerTest {
         int id = bug.getId();
         tracker.delete(id);
         assertThat(tracker.findById(id), is(nullValue()));
-    }
+    }*/
 
 }

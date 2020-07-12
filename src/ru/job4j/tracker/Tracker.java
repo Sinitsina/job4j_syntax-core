@@ -69,4 +69,8 @@ public class Tracker {
         return rsl;
     }
 
+    public Item[] getItems() {
+        return items;
+    }
+
 }
