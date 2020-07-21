@@ -16,35 +16,38 @@ public class StartUI {
                 Item item = new Item(name);
                 tracker.add(item);
             } else if (select == 1) {
-                System.out.println(tracker.getItems().toString());
+                for (Item i : tracker.findAll(tracker.getItems())){
+                    System.out.println(i);
+                }
             } else if (select == 2) {
                 System.out.print("Enter id: ");
                 int id = Integer.valueOf(scanner.nextLine());
-                System.out.print("Enter name: ");
-                String name = scanner.nextLine();
-                Item item = new Item(name);
-                tracker.replace(id, item);
-                if (tracker.replace(id, item)) {
+                tracker.delete(id);
+                if (tracker.delete(id)) {
                     System.out.println("Item with id " + id + "was successfully replaced.");
                 } else {
-                    System.out.println("Unfortunately Item with id " + id + "was not found and replaced.")
+                    System.out.println("Unfortunately Item with id " + id + "was not found and replaced.");
                 }
             } else if (select == 3) {
                 System.out.print("Enter id: ");
                 int id = Integer.valueOf(scanner.nextLine());
-                if (tracker.replace(id)) {
+                String name = scanner.nextLine();
+                Item item = new Item(name);
+                if (tracker.replace(id, item)) {
                     System.out.println("Item with id " + id + "was successfully deleted.");
                 } else {
-                    System.out.println("Unfortunately Item with id " + id + "was not found and deleted.")
+                    System.out.println("Unfortunately Item with id " + id + "was not found and deleted.");
                 }
             } else if (select == 4) {
                 System.out.print("Enter id: ");
                 int id = Integer.valueOf(scanner.nextLine());
-                tracker.findById(id);
+                System.out.print(tracker.findById(id));
             } else if (select == 5) {
                 System.out.print("Enter name: ");
                 String name = scanner.nextLine();
-                tracker.findByName(name);
+                for (Item i : tracker.findByName(name)){
+                    System.out.println(i);
+                }
             } else if (select == 6) {
                 run = false;
             }
