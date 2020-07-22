@@ -1,10 +1,5 @@
 package ru.job4j.tracker;
 
-
-import ru.job4j.poly.Transport;
-
-import javax.sound.midi.Track;
-
 public class StartUI {
     public void init(Input input, Tracker tracker) {
         boolean run = false;
