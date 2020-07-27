@@ -11,7 +11,7 @@ public class StartUI {
             } else if (select == 1) {
                 StartUI.showItem(tracker);
             } else if (select == 2) {
-                StartUI.deteleItem(input, tracker);
+                StartUI.deleteItem(input, tracker);
             } else if (select == 3) {
                 StartUI.replaceItem(input, tracker);
             } else if (select == 4) {
@@ -55,9 +55,8 @@ public class StartUI {
             System.out.println(i);
         }
     }
-    public static void deteleItem(Input input, Tracker tracker) {
+    public static void deleteItem(Input input, Tracker tracker) {
         int id = Integer.valueOf(input.askStr("Enter id: "));
-        tracker.delete(id);
         if (tracker.delete(id)) {
             System.out.println("Item with id " + id + "was successfully replaced.");
         } else {
@@ -77,14 +76,22 @@ public class StartUI {
     }
 
     public static void findItemById(Input input, Tracker tracker) {
-        int id = Integer.valueOf(input.askStr("Enter id: "));
-        System.out.print(tracker.findById(id));
+        int id = Integer.parseInt(input.askStr("Enter id: "));
+        if (tracker.findById(id) == null) {
+            System.out.print("Id is not found.");
+        } else {
+            System.out.print(tracker.findById(id));
+        }
     }
 
     public static void findItemByName(Input input, Tracker tracker) {
         String name = input.askStr("Enter name: ");
-        for (Item i : tracker.findByName(name)){
-            System.out.println(i);
+        if (tracker.findByName(name).length == 0) {
+            System.out.print("Item is not found.");
+        } else{
+            for (Item i : tracker.findByName(name)){
+                System.out.println(i);
+            }
         }
     }
 }
