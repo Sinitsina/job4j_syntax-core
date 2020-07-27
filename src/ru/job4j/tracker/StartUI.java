@@ -51,7 +51,7 @@ public class StartUI {
     }
 
     public static void showItem(Tracker tracker) {
-        for (Item i : tracker.findAll(tracker.getItems())) {
+        for (Item i : tracker.findAll()) {
             System.out.println(i);
         }
     }
