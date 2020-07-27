@@ -91,7 +91,7 @@ public class StartUI {
         if (item.length == 0) {
             System.out.print("Item is not found.");
         } else{
-            for (Item i : item){
+            for (Item i : item) {
                 System.out.println(i);
             }
         }
