@@ -77,19 +77,21 @@ public class StartUI {
 
     public static void findItemById(Input input, Tracker tracker) {
         int id = Integer.parseInt(input.askStr("Enter id: "));
-        if (tracker.findById(id) == null) {
+        Item item = tracker.findById(id);
+        if (item == null) {
             System.out.print("Id is not found.");
         } else {
-            System.out.print(tracker.findById(id));
+            System.out.print(item);
         }
     }
 
     public static void findItemByName(Input input, Tracker tracker) {
         String name = input.askStr("Enter name: ");
-        if (tracker.findByName(name).length == 0) {
+        Item[] item = tracker.findByName(name);
+        if (item.length == 0) {
             System.out.print("Item is not found.");
         } else{
-            for (Item i : tracker.findByName(name)){
+            for (Item i : item){
                 System.out.println(i);
             }
         }
