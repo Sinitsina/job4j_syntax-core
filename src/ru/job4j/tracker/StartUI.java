@@ -58,20 +58,21 @@ public class StartUI {
     public static void deleteItem(Input input, Tracker tracker) {
         int id = Integer.valueOf(input.askStr("Enter id: "));
         if (tracker.delete(id)) {
-            System.out.println("Item with id " + id + "was successfully replaced.");
+            System.out.println("Item with id " + id + "was successfully deleted.");
         } else {
-            System.out.println("Unfortunately Item with id " + id + "was not found and replaced.");
+            System.out.println("Unfortunately Item with id " + id + "was not found and deleted.");
         }
     }
 
     public static void replaceItem(Input input, Tracker tracker) {
-        int id = Integer.valueOf(input.askStr("Enter id: "));
+        int id = Integer.parseInt(input.askStr("Enter id: "));
         String name = input.askStr("Enter name: ");
         Item item = new Item(name);
+        item.setId(id);
         if (tracker.replace(id, item)) {
-            System.out.println("Item with id " + id + "was successfully deleted.");
+            System.out.println("Item with id " + id + " was successfully replaced.");
         } else {
-            System.out.println("Unfortunately Item with id " + id + "was not found and deleted.");
+            System.out.println("Unfortunately Item with id " + id + "was not found and replaced.");
         }
     }
 
