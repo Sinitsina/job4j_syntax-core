@@ -72,7 +72,7 @@ public class StartUI {
         if (tracker.replace(id, item)) {
             System.out.println("Item with id " + id + " was successfully replaced.");
         } else {
-            System.out.println("Unfortunately Item with id " + id + "was not found and replaced.");
+            System.out.println("Unfortunately Item with id " + id + " was not found and replaced.");
         }
     }
 
