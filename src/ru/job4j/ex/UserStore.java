@@ -10,14 +10,14 @@ public class UserStore {
             }
         }
             if (search == null) {
-                throw new UserNotFoundException("User is not found.");
+                throw new UserNotFoundException();
             }
             return search;
     }
 
     public static boolean validate(User user) throws UserInvalidException {
         if (!user.isValid() || user.getUsername().length() < 3) {
-            throw new UserInvalidException("User is not valid or user's name length is less than 3.");
+            throw new UserInvalidException();
         }
         return true;
     }
