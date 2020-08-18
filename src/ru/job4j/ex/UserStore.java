@@ -4,8 +4,10 @@ public class UserStore {
     public static User findUser(User[] users, String login) throws UserNotFoundException {
         User search = null;
         for (User user : users) {
+            if (user.getUsername().toLowerCase().equals(login.toLowerCase())) {
                 search = user;
                 break;
+            }
         }
             if (search == null) {
                 throw new UserNotFoundException("User is not found.");
