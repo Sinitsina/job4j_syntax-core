@@ -1,4 +1,4 @@
-package u.job4j.condition;
+package ru.job4j.condition;
 
 public class Cinema {
     public static void access(int age) {
